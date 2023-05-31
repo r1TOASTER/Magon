@@ -13,8 +13,6 @@
         "-std=c++17",
         "-o",
         "${workspaceFolder}/bin/MagonServer",
-        "-I",
-        "${workspaceFolder}/src/headers",
         "${workspaceFolder}/src/cpp/main.cpp"
       ],
       "group": {
