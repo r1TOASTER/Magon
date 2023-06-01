@@ -76,6 +76,7 @@ int main() {
     }
 
     std::cout << buffer << std::endl;
+    std::cout << strlen(buffer) << std::endl;
     
     // TODO: inject into screenshot "innocent" process 
 
