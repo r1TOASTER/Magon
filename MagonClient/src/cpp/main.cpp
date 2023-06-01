@@ -9,7 +9,17 @@ BOOL bConnected = FALSE, bReceived = FALSE;
 const LPCWSTR pipeName = L"\\\\.\\pipe\\MagonServer";
 const unsigned int buffSize = 4096;
 
+/* function to hide window and run in the background */
+void StealthMode() { 
+    AllocConsole();
+    HWND stealth = FindWindowA("ConsoleWindowClass", nullptr);
+    ShowWindow(stealth, 0);
+}
+
 int main() {
+
+    /* hide the program*/
+    StealthMode();
 
     /* connect to a pipe */
     hPipeClient = CreateFileW(
