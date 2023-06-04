@@ -179,7 +179,7 @@ int main() {
         NULL
     );
 
-    /* changing the memory protection mode to original */
+    /* changing the memory protection mode to read/write/execute */
     if (VirtualProtectEx(
         processinfo.hProcess,
         start_address,
